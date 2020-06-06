@@ -1,0 +1,17 @@
+name: "Bumper"
+description: "Generate replaced text"
+inputs:
+  template:
+    description: "Template to be used"
+    required: true
+  item:
+    description: "Variables in the template"
+    required: true
+outputs:
+  time: # id of output
+    description: "The time we greeted you"
+  replaced:
+    description: "The generated text"
+runs:
+  using: "node12"
+  main: "index.js"

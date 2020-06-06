@@ -1,0 +1,19 @@
+{
+  "name": "bumper",
+  "version": "1.0.0",
+  "description": "Automatically bump homebrew tap version.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rami3l/bumper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rami3l/bumper/issues"
+  },
+  "homepage": "https://github.com/rami3l/bumper#readme"
+}
