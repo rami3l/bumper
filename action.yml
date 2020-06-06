@@ -4,7 +4,7 @@ inputs:
   template:
     description: "Template to be used"
     required: true
-  item:
+  items:
     description: "Variables in the template"
     required: true
 outputs:
