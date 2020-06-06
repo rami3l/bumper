@@ -14,14 +14,32 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: replacer
         with:
-          template: "{three}, {two}, {one}, danse !"
+          template: |
+            class Pacaptr < Formula
+              desc "Pacman syntax wrapper for many package managers"
+              homepage "https://github.com/rami3l/pacaptr"
+              version "{version}"
+              url "{url_mac}"
+              sha256 "{sha256_mac}"
+              
+              if OS.linux?
+                url "{url_linux}"
+                sha256 "{sha256_linux}"
+              end
+
+              def install
+                bin.install "pacaptr"
+              end
+            end
+
           items: |
             {
-              "one": "un",
-              "two": "deux",
-              "three": "trois"
+              "version": "v0.2.0-alpha.2",
+              "url_mac": "https://github.com/rami3l/pacaptr/releases/download/v0.2.0-alpha.2/pacaptr-macos-amd64.tar.gz",
+              "sha256_mac": "37a704bb05c71fc71699fbdc3b47f84582b9c0248a6cfec22084a4d143d333f2",
+              "url_linux": "https://github.com/rami3l/pacaptr/releases/download/v0.2.0-alpha.2/pacaptr-linux-amd64.tar.gz",
+              "sha256_linux": "b84162d89f7ffc79f33d4072daea7ba620f14c089d8071f712c42b2f50385bf7"
             }
 
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.replacer.outputs.replaced }}"
+      - name: Get the output script
+        run: echo "${{ steps.replacer.outputs.replaced }}"

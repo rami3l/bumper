@@ -17,8 +17,6 @@ const format = function (str, col) {
 
 try {
     // `who-to-greet` input defined in action metadata file
-    const nameToGreet = core.getInput('who-to-greet');
-    console.log(`Hello ${nameToGreet}!`);
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
 
@@ -26,7 +24,7 @@ try {
     const template = core.getInput("template");
     const items = JSON.parse(core.getInput("items"));
     const replaced = format(template, items);
-    console.log(`Replaced text: ${replaced}`);
+    // console.log(`Replaced text: ${replaced}`);
     core.setOutput("replaced", replaced);
 
     // Get the JSON webhook payload for the event that triggered the workflow
