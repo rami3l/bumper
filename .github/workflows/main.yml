@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - run: npm i @actions/core @actions/github
       # To use this repository's private action,
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
+      - run: npm i @actions/core @actions/github
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: replacer
