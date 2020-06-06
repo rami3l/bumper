@@ -4,14 +4,16 @@ inputs:
   template:
     description: "Template to be used"
     required: true
-  items:
+  rules:
     description: "Variables in the template"
     required: true
 outputs:
   time: # id of output
     description: "The time we greeted you"
   replaced:
-    description: "The generated text"
+    description: "Generated text"
+  out:
+    description: "Output file"
 runs:
   using: "node12"
   main: "index.js"

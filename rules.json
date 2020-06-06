@@ -1,0 +1,7 @@
+{
+    "version": "v0.2.0-alpha.2",
+    "url_mac": "https://github.com/rami3l/pacaptr/releases/download/v0.2.0-alpha.2/pacaptr-macos-amd64.tar.gz",
+    "sha256_mac": "37a704bb05c71fc71699fbdc3b47f84582b9c0248a6cfec22084a4d143d333f2",
+    "url_linux": "https://github.com/rami3l/pacaptr/releases/download/v0.2.0-alpha.2/pacaptr-linux-amd64.tar.gz",
+    "sha256_linux": "b84162d89f7ffc79f33d4072daea7ba620f14c089d8071f712c42b2f50385bf7"
+}
