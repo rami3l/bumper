@@ -17,14 +17,12 @@ const format = function (str, col) {
 };
 
 try {
-    // `who-to-greet` input defined in action metadata file
-    const time = (new Date()).toTimeString();
-    core.setOutput("time", time);
+    // const time = (new Date()).toTimeString();
+    // core.setOutput("time", time);
 
     // Get the replaced text based on the template and the rules given.
     const template = fs.readFileSync(core.getInput("template"), 'utf8');
-    const rules_str = fs.readFileSync(core.getInput("rules"), 'utf8');
-    const rules = JSON.parse(rules_str);
+    const rules = JSON.parse(core.getInput("rules"));
     const replaced = format(template, rules);
     // console.log(`Replaced text: ${replaced}`);
     core.setOutput("replaced", replaced);
