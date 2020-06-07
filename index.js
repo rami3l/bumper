@@ -22,9 +22,14 @@ try {
 
     // Get the replaced text based on the template and the rules given.
     const template = fs.readFileSync(core.getInput("template"), 'utf8');
+    console.log(`Got template: \n${template}`);
+
     const rules = JSON.parse(core.getInput("rules"));
+    console.log(`Got rules: \n${rules}`);
+
     const replaced = format(template, rules);
-    // console.log(`Replaced text: ${replaced}`);
+    console.log(`Replaced text: \n${replaced}`);
+
     core.setOutput("replaced", replaced);
 
     fs.writeFileSync(core.getInput("out"), replaced, 'utf8');

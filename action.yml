@@ -2,8 +2,12 @@ name: "Bumper"
 description: "Generate replaced text"
 inputs:
   template:
-    description: "Template to be used"
+    description: "Template file to be used"
     required: true
+  out:
+    description: "Output file"
+    required: true
+    default: out.txt
   rules:
     description: "Variables in the template"
     required: true
