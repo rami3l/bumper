@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/rami3l/bumper/issues"
   },
-  "homepage": "https://github.com/rami3l/bumper#readme"
+  "homepage": "https://github.com/rami3l/bumper#readme",
+  "keywords": [],
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^3.0.0"
+  }
 }
